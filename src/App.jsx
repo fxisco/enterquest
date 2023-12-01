@@ -6,10 +6,10 @@ import { questions } from "./data/questions.json";
 function App() {
   const [responses, setResponses] = useState({});
   const [finished, setFinished] = useState(false);
-  const name = responses[0] || "asdfasdf";
+  const name = responses[0] || "";
 
   return (
-    <div className="font-sans	">
+    <div className="font-sans flex flex-col">
       <h1 className="text-3xl font-bold text-white mb-16">
         Entrepreneurial Journey {finished && "- Completion"}
       </h1>

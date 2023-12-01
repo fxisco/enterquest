@@ -1,19 +1,24 @@
 {
   "questions": [
     {
-      "title": "First, what is your name?"
+      "title": "First, what is your name?",
+      "avatar": "miko-1.png"
     },
     {
-      "title": "What do you foresee happening on this journey? Describe your vision:"
+      "title": "What do you foresee happening on this journey? Describe your vision:",
+      "avatar": "miko-2.png"
     },
     {
-      "title": "What drives you to make this vision a reality?"
+      "title": "What drives you to make this vision a reality?",
+      "avatar": "miko-3.png"
     },
     {
-      "title": "What is the problem you are trying to solve? How do you plan to address it?"
+      "title": "What is the problem you are trying to solve? How do you plan to address it?",
+      "avatar": "miko-4.png"
     },
     {
-      "title": "What are your relevant skills and advantages? How do you intend to leverage them?"
+      "title": "What are your relevant skills and advantages? How do you intend to leverage them?",
+      "avatar": "miko-5.png"
     }
   ]
 }
