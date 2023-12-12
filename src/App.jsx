@@ -36,7 +36,17 @@ function App() {
   return (
     <div className="font-sans relative">
       <div className="font-sans flex flex-col">
-        <h1 className="text-3xl font-bold text-black mb-16">{title}</h1>
+        <div className="flex mb-6 m-auto">
+          <h1 className="text-3xl font-bold text-black mr-3">{title}</h1>
+          <select
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-1 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            onChange={(e) => onLanguageChange(e)}
+            value={language}
+          >
+            <option value={"en"}>EN</option>
+            <option value={"da"}>DA</option>
+          </select>
+        </div>
         {!finished && (
           <Questions
             index={index}
@@ -54,7 +64,7 @@ function App() {
             <h3 className="text-xl text-black my-6 w-6/12 mx-auto">
               <span className="text-sky-500">{name}</span>! {finishTitle}
             </h3>
-            <div className="flex-row w-6/12 mx-auto">
+            <div className="flex-row w-10/12 md:w-6/12 mx-auto">
               {questions.slice(1).map((item, index) => (
                 <div
                   key={index}
@@ -69,7 +79,7 @@ function App() {
                 </div>
               ))}
             </div>
-            <div className="flex-row w-6/12 mx-auto">
+            <div className="flex-row w-10/12 md:w-6/12 mx-auto">
               <p className="text-xl text-black">
                 {feedback}{" "}
                 <a
@@ -90,16 +100,6 @@ function App() {
             </div>
           </>
         )}
-      </div>
-      <div className="w-10% absolute right-1 top-1">
-        <select
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-1 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          onChange={(e) => onLanguageChange(e)}
-          value={language}
-        >
-          <option value={"en"}>EN</option>
-          <option value={"da"}>DA</option>
-        </select>
       </div>
     </div>
   );

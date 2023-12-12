@@ -89,7 +89,7 @@ function Questions({
       <h3 className="text-xl italic text-black my-6 w-8/12 md:w-6/12 mx-auto">
         {currentQuestion}
       </h3>
-      <div className="w-8/12 md:w-6/12 mx-auto italic text-gray-500">
+      <div className="w-10/12 md:w-6/12 mx-auto italic text-gray-500">
         <p style={{ display: showInput ? 'block' : 'none' }}>{questions[index].hint}</p>
       </div>
       <div className="flex justify-center my-8">
@@ -97,14 +97,14 @@ function Questions({
           ref={textarea}
           style={{ display: showInput ? 'block' : 'none' }}
           type="text"
-          className="w-8/12 md:w-6/12 py-2.5 pl-2 text-gray-900 bg-gray-200 placeholder:text-black sm:text-sm sm:leading-6 rounded-md resize-y"
+          className="w-10/12 md:w-6/12 py-2.5 pl-2 text-gray-900 bg-gray-200 placeholder:text-black sm:text-sm sm:leading-6 rounded-md resize-y"
           placeholder={response}
           value={responses[index] ? responses[index] : ''}
           onChange={onResponseEnter}
         ></textarea>
       </div>
       {questions.length > 1 && (
-        <div className={`flex w-8/12 md:w-6/12 my-8 mx-auto ${alignment}`}>
+        <div className={`flex w-10/12 md:w-6/12 my-8 mx-auto ${alignment}`}>
           {index > 0 && showInput && (
             <button
               type="button"
