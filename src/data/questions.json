@@ -1,23 +1,37 @@
 {
+  "title": "Entrepreneurial Journey",
+  "finishTitle": "Let's embark on your entrepreneurial journey",
+  "feedback": "We value your feedback! Please,",
+  "contactUs": "Contact Us",
+  "share": "and share your thoughts.",
+  "response": "Response",
+  "previous": "Previous",
+  "next": "Next",
+  "finishForm": "Finish form",
   "questions": [
     {
       "title": "First, what is your name?",
+      "hint": "",
       "avatar": "miko-1.png"
     },
     {
       "title": "What do you foresee happening on this journey? Describe your vision:",
+      "hint": "For instance, your vision might involve revolutionizing the way people access information by creating an innovative educational platform.",
       "avatar": "miko-2.png"
     },
     {
       "title": "What drives you to make this vision a reality?",
+      "hint": "Think about the personal or professional experiences that inspire you. For example, you could mention your passion for education and your desire to make learning more accessible.",
       "avatar": "miko-3.png"
     },
     {
       "title": "What is the problem you are trying to solve? How do you plan to address it?",
+      "hint": "Consider a real-world issue that matters to you, like environmental sustainability. You might outline how you plan to address environmental challenges through your entrepreneurial venture.",
       "avatar": "miko-4.png"
     },
     {
       "title": "What are your relevant skills and advantages? How do you intend to leverage them?",
+      "hint": "Your skills could include web development. Explain how you intend to leverage your web development skills to create a platform that addresses your chosen problem, like an eco-friendly e-commerce site.",
       "avatar": "miko-5.png"
     }
   ]

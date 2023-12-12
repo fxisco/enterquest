@@ -1,11 +1,14 @@
 import { useRef, useEffect, useState } from "react";
-import { questions } from "../data/questions.json";
 import autosize from "autosize";
+import * as content from "../data/questions.json";
+import * as danishContent from "../data/questions-da.json";
 
 function Questions({
+  language,
   responses,
   setFinished,
   setResponses,
+  questions
 }) {
   const [index, setIndex] = useState(0);
   const [showInput, setShowInput] = useState(false);
@@ -18,6 +21,9 @@ function Questions({
     return accum
   }, 0)
   const formFinished = filledQuestionsQty === questions.length
+  const isDanish = language === 'da'
+  const translation = isDanish ? danishContent : content;
+  const { response, previous, next, finishForm } = translation
 
   const onResponseEnter = (e) => {
     setResponses((prev) => ({
@@ -78,16 +84,19 @@ function Questions({
 
   return (
     <>
-      <h3 className="text-xl italic text-white my-6 w-8/12 md:w-6/12 mx-auto">
+      <h3 className="text-xl italic text-black my-6 w-8/12 md:w-6/12 mx-auto">
         {currentQuestion}
       </h3>
+      <div className="w-8/12 md:w-6/12 mx-auto italic text-gray-500">
+        <p style={{ display: showInput ? 'block' : 'none' }}>{questions[index].hint}</p>
+      </div>
       <div className="flex justify-center my-8">
         <textarea
           ref={textarea}
           style={{ display: showInput ? 'block' : 'none' }}
           type="text"
-          className="w-8/12 md:w-6/12 py-2.5 pl-2 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6 rounded-md resize-y"
-          placeholder="Response"
+          className="w-8/12 md:w-6/12 py-2.5 pl-2 text-gray-900 bg-gray-200 placeholder:text-black sm:text-sm sm:leading-6 rounded-md resize-y"
+          placeholder={response}
           value={responses[index] ? responses[index] : ''}
           onChange={onResponseEnter}
         ></textarea>
@@ -100,7 +109,7 @@ function Questions({
               className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
               onClick={goBackward}
             >
-              Previous
+              {previous}
             </button>
           )}
           {index + 1 !== questions.length && responses[index]?.trim('') && showInput && (
@@ -109,7 +118,7 @@ function Questions({
               className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
               onClick={goForward}
             >
-              Next
+              {next}
             </button>
           )}
         </div>
@@ -121,11 +130,11 @@ function Questions({
             className="w-full rounded-md bg-black px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-black"
             onClick={() => setFinished(true)}
           >
-            Finish form
+            {finishForm}
           </button>
         </div>
       }
-      <img className="max-w-xs ml-auto mr-auto" src={`/assets/${questions[index].avatar}`} />
+      <img className="max-w-s ml-auto mr-auto" src={`/assets/${questions[index].avatar}`} />
     </>
   );
 }

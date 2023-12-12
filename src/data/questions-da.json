@@ -1,0 +1,38 @@
+{
+  "title": "Entreprenørrejse",
+  "finishTitle": "Lad os begive os ud på din entreprenørrejse",
+  "feedback": "Vi værdsætter din feedback!",
+  "contactUs": "Kontakt os",
+  "share": "venligst og del dine tanker.",
+  "response": "Svar",
+  "previous": "Forrige",
+  "next": "Næste",
+  "finishForm": "Afslut formular",
+  "questions": [
+    {
+      "title": "Først, hvad hedder du?",
+      "hint": "",
+      "avatar": "miko-1.png"
+    },
+    {
+      "title": "Hvad forudser du vil ske på denne rejse? Beskriv din vision:",
+      "hint": "For eksempel kan din vision involvere at revolutionere måden, folk får adgang til information på, ved at skabe en innovativ uddannelsesplatform.",
+      "avatar": "miko-2.png"
+    },
+    {
+      "title": "Hvad driver dig til at gøre denne vision til virkelighed?",
+      "hint": "Tænk på de personlige eller professionelle oplevelser, der inspirerer dig. Du kan for eksempel nævne din passion for uddannelse og din ønske om at gøre læring mere tilgængelig.",
+      "avatar": "miko-3.png"
+    },
+    {
+      "title": "Hvad er det problem, du forsøger at løse? Hvordan planlægger du at tackle det?",
+      "hint": "Overvej en realistisk problemstilling, der betyder noget for dig, som f.eks. miljømæssig bæredygtighed. Du kan beskrive, hvordan du planlægger at tackle miljømæssige udfordringer gennem din iværksættervirksomhed.",
+      "avatar": "miko-4.png"
+    },
+    {
+      "title": "Hvad er dine relevante færdigheder og fordele? Hvordan agter du at udnytte dem?",
+      "hint": "Dine færdigheder kan inkludere webudvikling. Forklar, hvordan du har til hensigt at udnytte dine webudviklingsfærdigheder til at skabe en platform, der adresserer dit valgte problem, som f.eks. en miljøvenlig e-handelsplatform.",
+      "avatar": "miko-5.png"
+    }
+  ]
+}
