@@ -5,6 +5,7 @@ import * as content from "./data/questions.json";
 import * as danishContent from "./data/questions-da.json";
 
 function App() {
+  const [index, setIndex] = useState(0);
   const [responses, setResponses] = useState({});
   const [finished, setFinished] = useState(false);
   const [language, setLanguage] = useState('en');
@@ -38,6 +39,8 @@ function App() {
         <h1 className="text-3xl font-bold text-black mb-16">{title}</h1>
         {!finished && (
           <Questions
+            index={index}
+            setIndex={setIndex}
             key={`questions-${language}`}
             language={language}
             questions={questions}

@@ -4,13 +4,15 @@ import * as content from "../data/questions.json";
 import * as danishContent from "../data/questions-da.json";
 
 function Questions({
+  index,
   language,
   responses,
   setFinished,
   setResponses,
+  setIndex,
   questions
 }) {
-  const [index, setIndex] = useState(0);
+
   const [showInput, setShowInput] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState('');
   const textarea = useRef(null)
