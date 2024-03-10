@@ -12,12 +12,16 @@ function App() {
   const isDanish = language === 'da'
   const translation = isDanish ? danishContent : content;
   const {
+    start,
     questions,
     title,
     finishTitle,
     feedback,
     contactUs,
     share,
+    introPart1,
+    introPart2,
+    introPart3,
   } = translation;
 
   useEffect(() => {
@@ -61,22 +65,21 @@ function App() {
         </div>
         {step === 'welcome' && (
           <div className="flex my-8 flex-col items-center">
+            <p className="w-8/12 text-start mb-6">
+              {introPart1}
+            </p>
+            <p className="w-8/12 text-start mb-6">
+              {introPart2}
+            </p>
             <p className="w-8/12 text-start">
-              Welcome to EnterQues, your mentor for a meaning journey.
-              I am currently a prototype version of something great, you’re about to embark upon the beautiful
-              journey of finding and forging your very own path. While the struggle is real, the reward is
-              marvelous!<br /><br />
-              I will help you to gather your project, thoughts, and ideas in a practical manner, be it a business, a
-              social enterprise, or a non-profit. Though this doesn’t guarantee you success, it will bring structure
-              to your thought process and give you room to experiment.<br /><br />
-              I am currently being developed by The common Ones, please feel free to reach out.
+              {introPart3}
             </p>
             <button
               type="button"
               className="mt-8 rounded-md text-white bg-blue-700 px-2.5 py-1.5 text-sm font-semibold ring-1 ring-inset ring-gray-300 hover:bg-blue-800"
               onClick={() => setStep('questions')}
             >
-              Let's start
+              {start}
             </button>
           </div>
         )}
